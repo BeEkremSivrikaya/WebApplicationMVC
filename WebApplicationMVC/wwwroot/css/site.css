@@ -1,0 +1,93 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+
+.card-body p.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-header {
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.card-footer {
+    font-weight: bold;
+    background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+}
+
+.btn-outline-primary {
+    background: linear-gradient(45deg, #42a5f5, #1e88e5);
+    color: white;
+    border: none;
+    transition: background 0.3s;
+}
+
+    .btn-outline-primary:hover {
+        background: linear-gradient(45deg, #1e88e5, #1565c0);
+    }
+
+
+
+
+.navbar {
+    background-color: #ffffff !important;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.nav-item:hover {
+    color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-outline-success {
+    border-radius: 0;
+}

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+@model List<Ürün>
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-0">
+                    <div class="card-header bg-primary text-white text-center" style="border-radius: 15px 15px 0 0;">
+                        <h5 class="card-title">@item.İsim</h5>
+                    </div>
+                    <div class="card-img">
+                        <a asp-controller="Ürün" asp-action="Ürün_Detay" asp-route-id="@item.Id">
+                            <img src="https://t4.ftcdn.net/jpg/06/31/78/87/360_F_631788778_jbL4ZKDb5q1pQVst2lpEg7XFGKLpupBE.jpg" alt="Ürün Resmi" class="card-img-top img-fluid" style="border-radius: 0 0 15px 15px;">
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="card-text">@item.Açıklama</p>
+                        <p class="card-text"><strong>Fiyat: </strong>@item.Fiyat TL</p>
+                    </div>
+                    <div class="card-footer bg-light border-0 text-center">
+                        <button class="btn btn-primary rounded-pill">
+                            <a class="text-white" style="text-decoration:none">Sepete Ekle</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

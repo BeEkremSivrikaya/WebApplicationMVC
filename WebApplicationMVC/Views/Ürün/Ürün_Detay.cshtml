@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Ürün_Detay";
+}
+@model Ürün
+<div class="container mt-4" ">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-4">
+            <img src="https://t4.ftcdn.net/jpg/06/31/78/87/360_F_631788778_jbL4ZKDb5q1pQVst2lpEg7XFGKLpupBE.jpg" alt="Ürün Resmi" class="img-fluid rounded shadow-lg" style="max-height: 400px;">
+        </div>
+        <div class="col-md-6 p-4" style="background-color: #F5F5F5; border-radius: 15px;">
+            <h1 class="mb-5" style="font-weight: bold; font-size: 3em; color: #333;">@Model.İsim</h1>
+            <h3 class="mb-4" style="font-weight: bold; font-size: 1.5em; color: #555;">Ürün Detay</h3>
+            <p class="lead mb-4" style="font-size: 1.25em; color: #777;">@Model.Açıklama</p>
+            <h3 class="mb-4"><strong>Fiyat: </strong><span style="color: #ffc107;">@Model.Fiyat TL</span></h3>
+            <p class="mb-4" style="font-size: 1.25em;"><strong>Stok Durumu: </strong><span style="color: @(Model.Stok > 0 ? "#28a745" : "#dc3545");">@(Model.Stok > 0 ? "Stokta Var" : "Stokta Yok")</span></p>
+            <form method="post" action="/Sepet/Ekle">
+                <input type="hidden" name="ürünId" value="@Model.Id" />
+                <button type="submit" class="btn btn-primary btn-lg mt-3" style="background: linear-gradient(135deg, #56ab2f, #a8e063); border: none; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                    Sepete Ekle
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
